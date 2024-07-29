@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <title>Youtube to MP3</title>
+    <title>YouTube to MP3</title>
 </head>
 <body>
 
     <div class="top-container">
         <form action="/convert-mp3" method="POST" id="form">
-            <h1><i class="fa-brands fa-youtube"></i>Youtube to MP3 Converter</h1>
-            <h4>Enter URL</h4>
+            <h1><i class="fa-brands fa-youtube"></i>YouTube to MP3 Converter</h1>
+            <h4>Enter YouTube URL</h4>
             <div>
-                <input type="text" name="videoID" placeholder="ID">
+                <input type="text" name="videoURL" placeholder="YouTube URL">
                 <button id="convert-btn">Convert</button>
             </div>
         </form>
@@ -24,7 +24,7 @@
         <% if(typeof success != "undefined" && success){ %>
         <div class="success">
             <p><%=song_title %></p>
-            <a href="<%=song_link %>"><button id="download-btn">DONWLOAD</button></a>
+            <a href="<%=song_link %>"><button id="download-btn">DOWNLOAD</button></a>
         </div>
         <%} else if(typeof success!="undefined" && !success){ %>
         <div class="errors">
@@ -32,8 +32,6 @@
         </div>
         
        <% } %>
-        
-        
     </div>
     
 </body>
